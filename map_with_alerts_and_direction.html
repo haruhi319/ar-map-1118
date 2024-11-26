@@ -57,7 +57,7 @@ function showNearbyInfo(userLat, userLon) {
     var alertCoordinates = [];
 
     // JSONファイルのURLからデータを取得
-    fetch('https://raw.githubusercontent.com/haruhi319/ar-map-1118/main/suirotuuhou.json')
+    fetch('https://haruhi319.github.io/ar-map-1118/suirotuuhou.json')
         .then(response => response.json())
         .then(data => {
             var alerts = data.features.map(function(feature) {
@@ -79,7 +79,7 @@ function showNearbyInfo(userLat, userLon) {
             }
 
             // 多角形の情報を処理
-            fetch('https://raw.githubusercontent.com/haruhi319/ar-map-1118/main/polygons.json')
+            fetch('https://haruhi319.github.io/ar-map-1118/polygons.json')
                 .then(response => response.json())
                 .then(polygons => {
                     for (var j = 0; j < polygons.length; j++) {
